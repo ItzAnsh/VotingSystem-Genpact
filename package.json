@@ -1,0 +1,18 @@
+{
+  "name": "votingsystem-genpact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\" ",
+    "start:frontend": "cd client && npm start",
+    "start:backend": "cd server && npm start",
+    "test": "echo \"Errmor: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

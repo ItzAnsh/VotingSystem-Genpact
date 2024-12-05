@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "scripts": {
+    "start": "node main.ts",
+    "dev": "nodemon main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "^16.4.7",
+    "express": "latest",
+    "express-rate-limit": "^7.4.1",
+    "mongoose": "^8.8.3"
+  }
+}
