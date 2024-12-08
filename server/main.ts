@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import Config from "./config/connectDB";
+import Config from "./config/config";
 import rateLimit from "express-rate-limit";
 
 dotenv.config({

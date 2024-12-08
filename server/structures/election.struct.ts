@@ -2,21 +2,27 @@ import Party from "./party.struct";
 
 class Election {
     id?: string;
-    date: Date;
+    name: string;
+    startDate: Date;
+    endDate: Date;
     Parties: Party[];
     winner?: Party;
 
-    public constructor(date: Date, Parties: Party[]);
-    public constructor(id: number, date: Date, Parties: Party[], winner?: Party);
+    public constructor(name: string, startDate: Date, endDate: Date, Parties: Party[]);
+    public constructor(id: number, name: string, startDate: Date, endDate: Date, Parties: Party[], winner?: Party);
     public constructor(...args: any[]) {
         if (args.length === 4) {
             this.id = args[0];
-            this.date = args[1];
-            this.Parties = args[2];
-            this.winner = args[3];
+            this.name = args[1];
+            this.startDate = args[2];
+            this.endDate = args[3];
+            this.Parties = args[4];
+            this.winner = args[5];
         } else {
-            this.date = args[0];
-            this.Parties = args[1];
+            this.name = args[0];
+            this.startDate = args[1];
+            this.endDate = args[2];
+            this.Parties = args[3];
         }
     }
 
@@ -24,8 +30,16 @@ class Election {
         return this.id || null;
     }
 
-    public getDate(): Date {
-        return this.date;
+    public getName(): string {
+        return this.name;
+    }
+
+    public getStartDate(): Date {
+        return this.startDate;
+    }
+
+    public getEndDate(): Date {
+        return this.endDate;
     }
 
     public getParties(): Party[] {
@@ -40,8 +54,16 @@ class Election {
         this.id = id;
     }
 
-    public setDate(date: Date): void {
-        this.date = date;
+    public setName(name: string): void {
+        this.name = name;
+    }
+
+    public setStartDate(date: Date): void {
+        this.startDate = date;
+    }
+
+    public setEndDate(date: Date): void {
+        this.endDate = date;
     }
 
     public setParties(Parties: Party[]): void {

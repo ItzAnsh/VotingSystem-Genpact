@@ -26,8 +26,12 @@ class AllElections {
 		return this.elections.find((e) => e.getId() === id);
 	}
 
-	public getElectionByDate(date: Date): Election | undefined {
-		return this.elections.find((e) => e.getDate() === date);
+	public getElectionByStartDate(date: Date): Election | undefined {
+		return this.elections.find((e) => e.getStartDate() === date);
+	}
+
+	public getElectionByEndDate(date: Date): Election | undefined {
+		return this.elections.find((e) => e.getEndDate() === date);
 	}
 
 	public getElectionByWinner(winner: string): Election | undefined {
